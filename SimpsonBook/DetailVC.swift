@@ -10,10 +10,19 @@ import UIKit
 
 class DetailVC: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var jobLabel: UILabel!
+    
+    var selectedCharacter : Characters? //Opsiyonel yapmak için ? ekledim.
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLabel.text = selectedCharacter?.name
+        jobLabel.text = selectedCharacter?.job
+        imageView.image = selectedCharacter?.image
     }
     
 
